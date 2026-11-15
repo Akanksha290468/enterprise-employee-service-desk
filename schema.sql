@@ -1,0 +1,4 @@
+-- The complete schema is initialized automatically by backend/db.js on first run.
+-- Tables: departments, users, categories, service_requests, assignments,
+-- comments, status_history, notifications, audit_logs.
+-- SQLite foreign-key constraints and role/status CHECK constraints are enabled.
