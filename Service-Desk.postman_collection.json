@@ -1,0 +1,15 @@
+{
+ "info":{"name":"Enterprise Employee Service Desk API","schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+ "variable":[{"key":"baseUrl","value":"http://localhost:3000"}],
+ "item":[
+  {"name":"Health","request":{"method":"GET","url":"{{baseUrl}}/api/health"}},
+  {"name":"Login - Employee","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"email\":\"employee@company.com\",\"password\":\"User@123\"}"},"url":"{{baseUrl}}/api/auth/login"}},
+  {"name":"Current User","request":{"method":"GET","url":"{{baseUrl}}/api/auth/me"}},
+  {"name":"List Requests","request":{"method":"GET","url":"{{baseUrl}}/api/requests"}},
+  {"name":"Create Request","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"title\":\"VPN access issue\",\"category_id\":1,\"description\":\"Unable to access company VPN from home.\",\"priority\":\"High\"}"},"url":"{{baseUrl}}/api/requests"}},
+  {"name":"Employee Dashboard","request":{"method":"GET","url":"{{baseUrl}}/api/dashboard/employee"}},
+  {"name":"Manager Dashboard","request":{"method":"GET","url":"{{baseUrl}}/api/dashboard/manager"}},
+  {"name":"Notifications","request":{"method":"GET","url":"{{baseUrl}}/api/notifications"}},
+  {"name":"Logout","request":{"method":"POST","url":"{{baseUrl}}/api/auth/logout"}}
+ ]
+}
